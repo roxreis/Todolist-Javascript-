@@ -9,6 +9,25 @@
 .botaoCheck{
     height: 6vh;
     width: 4vw;
+}
 
+footer{
+    position: fixed;
+    bottom: 0;
+    height: 8vh;
+    width: 100%;    
+    padding: 0.5rem 1rem;
+    display:flex;
+}
+
+#add{
+    height: 5vh;
+    width: 6vw;
+}
+
+#novaTarefa{
+    width: 80%;
+    border-radius: 20px;
+    display:flex;
 
 }
