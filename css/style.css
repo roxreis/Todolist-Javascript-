@@ -1,0 +1,14 @@
+.tarefa{
+    border: 1px solid #404040;
+    border-radius: 20px;
+    padding: 30px;
+    display:flex;
+    min-width: 400px;
+}   
+
+.botaoCheck{
+    height: 6vh;
+    width: 4vw;
+
+
+}
