@@ -12,6 +12,9 @@ if(localStorage.getItem('listaTarefas')){
     localStorage.setItem("listaTarefas", JSON.stringify(listaTarefas));
 }
 
+let buttonExcluir = document.getElementsByClassName('botaoCheck');
+
+
 
 
 mostrarTela(listaTarefas);
@@ -71,11 +74,25 @@ function gerarTarefa(valorDigitado){
     imgCheck.setAttribute('class','botaoCheck');
     imgCheck.setAttribute('src','img/botaoCheck.jpg' );
 
+                        // essa inf vem do js como global
+    imgCheck.onclick = function(event){
+        let tarefaPai = event.target.parentNode.parentNode;
+        tarefaPai.remove();
+    }
+
+    // essa forma é mais facil pq ja existe na funcao
+    // tarefa.remove(); 
+
     buttonCheck.appendChild(imgCheck);
 
     tarefa.appendChild(titulo);
     tarefa.appendChild(buttonCheck);
 
     board.appendChild(tarefa);
-
 }
+
+
+
+
+
+
