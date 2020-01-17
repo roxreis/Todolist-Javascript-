@@ -15,6 +15,28 @@ if(localStorage.getItem('listaTarefas')){
 
 mostrarTela(listaTarefas);
 
+
+// funcao para adicionar tarefa com evento de clicar o botao enter
+inputAdd.onkeypress = function(event){
+    if(event.key == "Enter"){
+        let valorDigitado = inputAdd.value;
+        listaTarefas.push(valorDigitado);
+    
+       gerarTarefa(valorDigitado, listaTarefas.length -1);
+    // necessario colocar esta linha de localStorage para atualizar com a nova tarefa
+        localStorage.setItem("listaTarefas", JSON.stringify(listaTarefas));
+
+        // inputAdd.value = "" serve para apagar o que vc escreveu apos criar o evento
+        inputAdd.value = "";
+
+    }
+
+
+
+}
+
+
+
 buttonAdd.onclick = function(){
 
     let valorDigitado = inputAdd.value;
@@ -78,8 +100,7 @@ function gerarTarefa(valorDigitado, posicao){
     tarefa.remove(); 
 
     }
-
-    
+  
     
     
 
